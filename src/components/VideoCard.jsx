@@ -5,7 +5,9 @@ import {Link} from 'react-router-dom';
 
 
 function VideoCard({video: {id:{videoId}, snippet }}) {
+	
   return (
+
 		<Card
 			sx={{
 				borderRadius: 0,
@@ -27,7 +29,7 @@ function VideoCard({video: {id:{videoId}, snippet }}) {
 				sx={{
 					backgroundColor: "#413F42",
 					height: 110,
-					width: { md: "350px", xs: "100%" },
+					width: { md: "330px", xs: "95%" },
 				}}
 			>
 				<Link to={videoId ? `/video/${videoId}` : ""}>
@@ -40,6 +42,7 @@ function VideoCard({video: {id:{videoId}, snippet }}) {
 					</Typography>
 				</Link>
 				<Link
+
 					to={
 						snippet?.channelId
 							? `/channel/${snippet?.channelId}`
