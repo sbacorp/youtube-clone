@@ -21,7 +21,7 @@ function VideoDetails() {
 	}, [id]);
 	if (!videoDetail?.snippet) return <Loader/>;
 	const {
-		snippet: { title, channelId, channelTitle },
+		snippet: { title, channelId, channelTitle, description },
 		statistics: { viewCount, likeCount },
 	} = videoDetail;
 
@@ -70,15 +70,28 @@ function VideoDetails() {
 									sx={{ opacity: 0.7 }}
 								>
 									{parseInt(likeCount).toLocaleString()}{" "}
-									нравится
+									отметок нравится
 								</Typography>
 							</Stack>
 						</Stack>
+								<Typography
+									mt={2}
+									variant="body1"
+									sx={{ opacity: 0.7 }}
+								>
+									
+									
+								</Typography>
 					</Box>
 				</Box>
-      <Box px={2} py={{md:1, xs:5}} justifyContent='center' alignItems='center'>
-        <Videos videos={videos} direction= 'column'/>
-      </Box>
+				<Box
+					px={2}
+					py={{ md: 1, xs: 5 }}
+					justifyContent="center"
+					alignItems="center"
+				>
+					<Videos videos={videos} direction="column" />
+				</Box>
 			</Stack>
 		</Box>
 	);

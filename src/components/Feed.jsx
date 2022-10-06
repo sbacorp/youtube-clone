@@ -26,13 +26,7 @@ function Feed() {
 					selectedCategory={selectedCategory}
 					setSelectedCategory={setSelectedCategory}
 				/>
-				<Typography
-					className="copyright"
-					variants="body2"
-					sx={{ mt: "1.5", color: "#fff" }}
-				>
-					Copyright 2022
-				</Typography>
+				
 			</Box>
 			<Box
 				p={2}
@@ -43,12 +37,13 @@ function Feed() {
 				}}
 			>
 				<Typography
+					py={2}
 					variant="h4"
 					fontWeight="bold"
 					sx={{ color: "#fff" }}
 				>
 					{selectedCategory}{" "}
-					<span style={{ color: "#f31503" }}>videos</span>
+					<span style={{ color: "#f31503" }}>видео	</span>
 				</Typography>
 
 				<Videos videos={videos} />
