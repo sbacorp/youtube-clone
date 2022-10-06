@@ -9,7 +9,7 @@ function SearchFeed() {
   const {searchTerm} = useParams();
 	const [videos, setVideos] = useState([]);
 	useEffect(() => {
-		scrollTo(0, 0);
+		window.scrollTo(0, 0);
 		fetchFromAPI(`search?part=snippet&q=${searchTerm}`).then((data) =>
 			setVideos(data.items)
 		);
