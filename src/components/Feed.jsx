@@ -8,6 +8,7 @@ function Feed() {
 	const [selectedCategory, setSelectedCategory] = useState('New');
 	const [videos, setVideos] = useState([])
 	useEffect(() => {
+		scrollTo(0, 0);
 		fetchFromAPI(`search?part=snippet&q=${selectedCategory}`)
 		.then((data)=>setVideos(data.items))
 	}, [selectedCategory]);

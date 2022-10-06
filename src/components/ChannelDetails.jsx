@@ -9,6 +9,7 @@ function ChannelDetails() {
 	const [channelDelails, setChannelDelails] = useState(null);
 	const [videos, setVideos] = useState([]);
 	useEffect(() => {
+		scrollTo(0,0);
 		fetchFromAPI(`channels?&part=snippet&id=${id}`).then((data) =>
 			setChannelDelails(data?.items[0])
 		);

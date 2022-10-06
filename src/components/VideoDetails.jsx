@@ -11,6 +11,7 @@ function VideoDetails() {
   const [videos, setVideos] = useState([]);
 	const { id } = useParams();
 	useEffect(() => {
+		scrollTo(0, 0);
 		fetchFromAPI(`videos?part=snippet,statistics&id=${id}`).then((data) =>
 			setVideoDetail(data.items[0])
 		);
