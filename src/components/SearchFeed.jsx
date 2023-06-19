@@ -6,7 +6,7 @@ import { fetchFromAPI } from "../utils/fetchFromAPI";
 
 function SearchFeed() {
 
-  const {searchTerm} = useParams();
+	const { searchTerm } = useParams();
 	const [videos, setVideos] = useState([]);
 	useEffect(() => {
 		window.scrollTo(0, 0);
@@ -25,7 +25,7 @@ function SearchFeed() {
 			}}
 		>
 			<Typography variant="h4" fontWeight="bold" sx={{ color: "#fff" }}>
-				Результаты поиска для :
+				Results for :
 				<span style={{ color: "#f31503" }}>{searchTerm}</span>
 			</Typography>
 

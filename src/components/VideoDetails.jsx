@@ -8,7 +8,7 @@ import { fetchFromAPI } from "../utils/fetchFromAPI";
 
 function VideoDetails() {
 	const [videoDetail, setVideoDetail] = useState(null);
-  const [videos, setVideos] = useState([]);
+	const [videos, setVideos] = useState([]);
 	const { id } = useParams();
 	useEffect(() => {
 		window.scrollTo(0, 0);
@@ -19,18 +19,18 @@ function VideoDetails() {
 			setVideos(data.items)
 		);
 	}, [id]);
-	if (!videoDetail?.snippet) return <Loader/>;
+	if (!videoDetail?.snippet) return <Loader />;
 	const {
-		snippet: { title, channelId, channelTitle, description },
+		snippet: { title, channelId, channelTitle },
 		statistics: { viewCount, likeCount },
 	} = videoDetail;
 
 	return (
-		<Box minHeight="95vh">
+		<Box minHeight="98vh">
 			<Stack direction={{ xs: "column", md: "row" }}>
 				<Box flex={1}>
 					<Box
-						sx={{ width: "100%", position: "sticky", top: "90px" }}
+						sx={{ width: "100%", position: "sticky", top: "80px" }}
 					>
 						<ReactPlayer
 							className="react-player"
@@ -39,7 +39,7 @@ function VideoDetails() {
 						/>
 						<Typography
 							color="#fff"
-							variants="h5"
+							variants="h6"
 							p={2}
 							fontWeight="bold"
 						>
@@ -51,7 +51,7 @@ function VideoDetails() {
 							sx={{ color: "#fff" }}
 						>
 							<Link to={`/channel/${channelId}`}>
-								<Typography variant="h6" p={2} color="gray">
+								<Typography variant="h6" p={0} color="gray">
 									{channelTitle}
 								</Typography>
 							</Link>
@@ -62,7 +62,7 @@ function VideoDetails() {
 									sx={{ opacity: 0.7 }}
 								>
 									{parseInt(viewCount).toLocaleString()}{" "}
-									просмотров
+									views
 								</Typography>
 								<Typography
 									px={2}
@@ -70,18 +70,18 @@ function VideoDetails() {
 									sx={{ opacity: 0.7 }}
 								>
 									{parseInt(likeCount).toLocaleString()}{" "}
-									отметок нравится
+									likes
 								</Typography>
 							</Stack>
 						</Stack>
-								<Typography
-									mt={2}
-									variant="body1"
-									sx={{ opacity: 0.7 }}
-								>
-									
-									
-								</Typography>
+						<Typography
+							mt={2}
+							variant="body1"
+							sx={{ opacity: 0.7 }}
+						>
+
+
+						</Typography>
 					</Box>
 				</Box>
 				<Box

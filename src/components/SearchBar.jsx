@@ -3,12 +3,12 @@ import { useNavigate } from "react-router-dom";
 import { Paper, IconButton } from "@mui/material";
 import { Search } from "@mui/icons-material";
 
-const SearchBar=()=> {
+const SearchBar = () => {
 	const [searchTerm, setSearchTerm] = React.useState('');
 	const navigate = useNavigate();
-	const handleSubmit = (e) =>{
+	const handleSubmit = (e) => {
 		e.preventDefault();
-		if(searchTerm){
+		if (searchTerm) {
 			navigate(`/search/${searchTerm}`);
 			setSearchTerm('')
 		}
@@ -27,7 +27,7 @@ const SearchBar=()=> {
 		>
 			<input
 				className="search-bar"
-				placeholder="Поиск..."
+				placeholder="search..."
 				value={searchTerm}
 				onChange={e => setSearchTerm(e.target.value)}
 				style={{ fontSize: "16px" }}

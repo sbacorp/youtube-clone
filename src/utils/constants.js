@@ -12,17 +12,17 @@ import DeveloperModeIcon from '@mui/icons-material/DeveloperMode';
 export const logo = 'https://i.ibb.co/s9Qys2j/logo.png';
 
 export const categories = [
-  { name: 'Новое', icon: <HomeIcon />, },
-  { name: 'Программирование', icon: <CodeIcon />, },
+  { name: 'New', icon: <HomeIcon />, },
+  { name: 'Programming', icon: <CodeIcon />, },
   { name: 'ReactJS', icon: <CodeIcon />, },
   { name: 'NextJS', icon: <CodeIcon />, },
-  { name: 'Музыка', icon: <MusicNoteIcon /> },
-  { name: 'Образование', icon: <SchoolIcon />, },
-  { name: 'Подкасты', icon: <GraphicEqIcon />, },
-  { name: 'Кино', icon: <OndemandVideoIcon />, },
-  { name: 'Игры', icon: <SportsEsportsIcon />, },
-  { name: 'Прямой эфир', icon: <LiveTvIcon />, },
-  { name: 'Спрорт', icon: <FitnessCenterIcon />, },
-  { name: 'Зал', icon: <FitnessCenterIcon />, },
-  { name: 'Криптовалюта', icon: <DeveloperModeIcon />, },
+  { name: 'Music', icon: <MusicNoteIcon /> },
+  { name: 'Education', icon: <SchoolIcon />, },
+  { name: 'Podcasts', icon: <GraphicEqIcon />, },
+  { name: 'Movies', icon: <OndemandVideoIcon />, },
+  { name: 'Games', icon: <SportsEsportsIcon />, },
+  { name: 'Broadcast', icon: <LiveTvIcon />, },
+  { name: 'Sport', icon: <FitnessCenterIcon />, },
+  { name: 'Gym', icon: <FitnessCenterIcon />, },
+  { name: 'Cryptocurrency', icon: <DeveloperModeIcon />, },
 ];
